@@ -48,7 +48,7 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-bold mb-4">Data Science</h3>
+            <h3 className="text-2xl font-bold mb-4">Data Science Enthusiast</h3>
             <p className="text-gray-300 mb-6">
             Hi, I'm Hari Om Singh —
             An enthusiastic B.Tech student specializing in Computer Science and Engineering, driven by a deep curiosity for technology and a passion for solving complex problems. I enjoy turning ideas into efficient code and have hands-on experience with languages like Java, Python, and SQL. I’m constantly exploring innovative solutions that can make a real-world impact through the power of tech.
