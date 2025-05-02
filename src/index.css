@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-poppins bg-dark-800 text-white m-0 p-0 min-h-screen overflow-x-hidden;
+}
+
+::selection {
+  @apply bg-primary-500 text-white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-700;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-8 relative inline-block;
+}
+
+.section-title::after {
+  content: '';
+  @apply absolute -bottom-2 left-0 h-1 w-2/3 bg-primary-500 transition-all duration-300;
+}
+
+.section-title:hover::after {
+  @apply w-full;
+}
+
+.skill-icon {
+  @apply flex flex-col items-center justify-center p-4 rounded-lg bg-dark-600 hover:bg-dark-500 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:shadow-lg hover:shadow-primary-500/20;
+}
+
+.skill-icon:hover img,
+.skill-icon:hover svg {
+  @apply scale-125 text-primary-400 transition-all duration-300;
+}
+
+.project-card {
+  @apply bg-dark-700 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-primary-500/20 relative;
+}
+
+.project-card::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent opacity-0 transition-opacity duration-300;
+}
+
+.project-card:hover::before {
+  @apply opacity-100;
+}
+
+.certificate-card {
+  @apply bg-dark-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-primary-500/20;
+}
+
+.certificate-card:hover img {
+  @apply scale-110 brightness-110;
+}
+
+.link-hover {
+  @apply relative overflow-hidden;
+}
+
+.link-hover::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300;
+}
+
+.link-hover:hover::after {
+  @apply w-full;
+}
+
+.button-primary {
+  @apply px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-primary-500/30 hover:-translate-y-1;
+}
+
+.button-secondary {
+  @apply px-6 py-3 bg-transparent border-2 border-primary-500 text-white rounded-full font-medium hover:bg-primary-500/10 transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-primary-500/20 hover:-translate-y-1;
+}
+
+input, textarea {
+  @apply transition-all duration-300;
+}
+
+input:focus, textarea:focus {
+  @apply transform scale-[1.02] shadow-lg shadow-primary-500/20;
+}
+
+.social-icon {
+  @apply bg-dark-700 hover:bg-primary-500 p-3 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary-500/30;
+}
+
+.social-icon svg {
+  @apply transition-all duration-300;
+}
+
+.social-icon:hover svg {
+  @apply text-white transform scale-110;
+}
